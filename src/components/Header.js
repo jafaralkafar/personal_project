@@ -13,7 +13,10 @@ function Header(props) {
             <Link to="/">
                 <Tilt options={{max: 35}}>
                     <img style={styles.logo} src={pypsIcon} alt="Pyps Logo"/>
-                </Tilt>
+                </Tilt>  
+            </Link>
+            <Link to='/' style={{textDecoration:"none", color:"inherit"}}>
+                <span>PYPS</span>
             </Link>
             <div style={styles.navbar}>
                 { user && <NavBar />}
@@ -35,7 +38,8 @@ let styles = {
         justifyContent: 'space-between',
         padding: 20,
         alignItems: 'center',
-        backgroundColor: '#0a4d27'
+        backgroundColor: '#0a4d27',
+        fontFamily: 'Georgia, serif'
     },
     logo: {
         flex: 4,
@@ -46,7 +50,6 @@ let styles = {
     navbar: {
         flex: 1,
         display: 'flex',
-        justifyContent: 'flex-end',
-        fontFamily: 'Georgia, serif'
+        justifyContent: 'flex-end'
     }
 }

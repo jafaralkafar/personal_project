@@ -2,8 +2,18 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { login } from '../redux/reducers/user'
 
-export default function LandingPage(props) {
+function LandingPage(props) {
+    
     return (
-        <div>Landing Page</div>
+        <div>
+
+        </div>
     )
 }
+
+let mapStateToProps = state => {
+    let { data: user } = state.user
+    return { user }
+}
+
+export default connect(mapStateToProps, { login })(LandingPage)
