@@ -11,4 +11,4 @@ CREATE TABLE stories (
     user_id INTEGER REFERENCES users,
     title VARCHAR,
     fileUrl TEXT
-)
+);

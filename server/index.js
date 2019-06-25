@@ -25,7 +25,7 @@ app.use(session({
     }
 }))
 
-app.post('auth/register', AuthCtrl.register)
-app.post('auth/login', AuthCtrl.login)
+app.post('/auth/register', AuthCtrl.register)
+app.post('/auth/login', AuthCtrl.login)
 app.get('/auth/logout', AuthCtrl.logout)
 app.get('/auth/currentUser', AuthCtrl.currentUser)
