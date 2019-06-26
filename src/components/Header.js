@@ -6,6 +6,8 @@ import { logout } from '../redux/reducers/user'
 import Tilt from 'react-tilt'
 import NavBar from './NavBar'
 
+
+
 function Header(props) {
     let { user } = props
     return (
@@ -15,10 +17,10 @@ function Header(props) {
                     <img style={styles.logo} src={pypsIcon} alt="Pyps Logo"/>
                 </Tilt>  
             </Link>
-            <Link to='/' style={{textDecoration:"none", color:"inherit"}}>
-                <span>PYPS</span>
+            <Link to='/' style={styles.logo}>
+                <div style={{display: 'flex', alignItems:'center'}}>PYPS</div>
             </Link>
-            <div style={styles.navbar}>
+            <div>
                 { user && <NavBar />}
             </div>
         </div>
@@ -36,20 +38,19 @@ let styles = {
     header: {
         display: 'flex',
         justifyContent: 'space-between',
-        padding: 20,
+        padding: 10,
         alignItems: 'center',
-        backgroundColor: '#0a4d27',
-        fontFamily: 'Georgia, serif'
+        backgroundColor: '#142a11',
+        fontFamily: 'Georgia, serif',
+        color: 'gray'
     },
     logo: {
         flex: 4,
         display: 'flex',
         justifyContent: 'flex-start',
-        height: 50
-    },
-    navbar: {
-        flex: 1,
-        display: 'flex',
-        justifyContent: 'flex-end'
+        height: 50,
+        color: 'inherit',
+        fontFamily: 'inherit',
+        textDecoration: 'none'
     }
 }

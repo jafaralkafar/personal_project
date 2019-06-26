@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import { login } from '../redux/reducers/user'
+import LoginForm from './LoginForm'
+
 
 function LandingPage(props) {
     
     return (
         <div>
-
+            <LoginForm />
         </div>
     )
 }
@@ -16,4 +17,4 @@ let mapStateToProps = state => {
     return { user }
 }
 
-export default connect(mapStateToProps, { login })(LandingPage)
+export default connect(mapStateToProps)(LandingPage)
