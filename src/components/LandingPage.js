@@ -1,20 +1,27 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Dashboard from './Dashboard'
+import Loading from './Loading'
 
 
 function LandingPage(props) {
-    console.log(props.user)
     return (
         <div>
-            { !(props.user) && <Link to='/login'>Login</Link>}
+            { props.loading ? <Loading /> : (props.user ? <Dashboard /> : 
+            <div>
+                <Link to='/register'>Register</Link>
+                <br/>
+                <Link to='/login'>Login</Link>
+            </div>) }
         </div>
     )
 }
 
 let mapStateToProps = state => {
-    let { data: user } = state.user
-    return { user }
+    let { data: user, loading } = state.user
+    
+    return { user, loading }
 }
 
 export default connect(mapStateToProps)(LandingPage)

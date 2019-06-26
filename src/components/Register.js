@@ -1,40 +1,43 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { login } from '../redux/reducers/user'
+import { register } from '../redux/reducers/user'
 
-const LoginForm = props => {
-    
-    const [state, setState] = useState({email: '', password: ''})
-    
+const Register = props => {
+
+    const [state, setState] = useState({name: '', email: '', password: '', isAdmin: false})
+
     const handleChange = e => {
         let { name, value } = e.target
-        setState( {...state, [name]: value})
+        setState( { ...state, [name]: value })
     }
-    
 
     const handleSubmit = () => {
-        props.login( state )
+        props.register( state )
     }
 
     return (
         <div>
             <input
-                name="email"
+                name="name"
                 type="text"
+                placeholder="name"
+                onChange={handleChange}/>
+            <input
+                name="email"
+                type="email"
                 placeholder="email"
                 onChange={handleChange}/>
-            <input 
+            <input
                 name="password"
                 type="password"
                 placeholder="password"
                 onChange={handleChange}/>
             <Link to='/'>
-                <button onClick={handleSubmit}>Login</button>
+                <button onClick={handleSubmit}>Register</button>
             </Link>
-            <br/>
         </div>
     )
 }
 
-export default connect(null, { login })(LoginForm)
+export default connect(null, { register })(Register)

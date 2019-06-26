@@ -4,6 +4,10 @@ const GET_USER = 'GET_USER'
 const GET_USER_PENDING = 'GET_USER_PENDING'
 const GET_USER_FULFILLED = 'GET_USER_FULFILLED'
 
+const REGISTER_USER = 'REGISTER_USER'
+const REGISTER_USER_PENDING = 'REGISTER_USER_PENDING'
+const REGISTER_USER_FULFILLED = 'REGISTER_USER_FULFILLED'
+
 const LOGIN_USER = 'LOGIN_USER'
 const LOGIN_USER_PENDING = 'LOGIN_USER_PENDING'
 const LOGIN_USER_FULFILLED = 'LOGIN_USER_FULFILLED'
@@ -22,6 +26,10 @@ export default function(state = initialState, action) {
         case GET_USER_PENDING:
             return { ...state, loading: true }
         case GET_USER_FULFILLED:
+            return { ...state, data: action.payload.data, loading: false }
+        case REGISTER_USER_PENDING:
+            return { ...state, loading: true }
+        case REGISTER_USER_FULFILLED:
             return { ...state, data: action.payload.data, loading: false }
         case LOGIN_USER_PENDING:
             return { ...state, loading: true }
@@ -54,5 +62,12 @@ export function logout() {
     return {
         type: LOGOUT_USER,
         payload: axios.get('/auth/logout')
+    }
+}
+
+export function register(registerInfo) {
+    return {
+        type: REGISTER_USER,
+        payload: axios.post('/auth/register', registerInfo)
     }
 }

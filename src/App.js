@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header'
 import LandingPage from './components/LandingPage'
 import LoginForm from './components/LoginForm'
+import Register from './components/Register'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route path="/" component={LandingPage} exact/>
           <Route path="/login" component={LoginForm} />
+          <Route path="/register" component={Register} />
         </Switch>
       </Router>
     </div>
