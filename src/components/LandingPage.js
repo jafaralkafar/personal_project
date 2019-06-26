@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import LoginForm from './LoginForm'
+import { Link } from 'react-router-dom'
 
 
 function LandingPage(props) {
-    
+    console.log(props.user)
     return (
         <div>
-            <LoginForm />
+            { !(props.user) && <Link to='/login'>Login</Link>}
         </div>
     )
 }
