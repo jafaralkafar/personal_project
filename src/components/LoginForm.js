@@ -18,6 +18,7 @@ const LoginForm = props => {
     }
 
     return (
+        <>
         <div>
             <input
                 name="email"
@@ -29,11 +30,12 @@ const LoginForm = props => {
                 type="password"
                 placeholder="password"
                 onChange={handleChange}/>
-            <Link to='/'>
-                <button onClick={handleSubmit}>Login</button>
-            </Link>
+                <Link to='/'>
+                    <button onClick={handleSubmit}>Login</button>
+                </Link>
             <br/>
         </div>
+        </>
     )
 }
 

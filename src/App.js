@@ -5,6 +5,7 @@ import Header from './components/Header'
 import LandingPage from './components/LandingPage'
 import LoginForm from './components/LoginForm'
 import Register from './components/Register'
+import Dashboard from './components/Dashboard'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" component={LandingPage} exact/>
           <Route path="/login" component={LoginForm} />
           <Route path="/register" component={Register} />
+          <Route path="/dashboard" component={Dashboard} />
         </Switch>
       </Router>
     </div>
