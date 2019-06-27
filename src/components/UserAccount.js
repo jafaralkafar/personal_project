@@ -4,8 +4,9 @@ import { connect } from 'react-redux'
 const UserAccount = props => {
 
     return (
-        <div>
+        <div style={styles}>
             <p>{props.user.name}</p>
+            <br/>
             <p>{props.user.email}</p>
         </div>
     )
@@ -17,3 +18,9 @@ let mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(UserAccount)
+
+let styles = {
+    display: 'flex',
+    justifyContent: 'center'
+
+}

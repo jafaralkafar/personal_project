@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Sidebar from './Sidebar'
+import UserAccount from './UserAccount'
 
 
 const Dashboard = props => {
@@ -9,8 +10,10 @@ const Dashboard = props => {
     return (
         <div style={styles.container}>
             <Sidebar style={styles.sidebar} />
-            <div>{`${props.user.name}'s Dashboard`}</div>
-
+            <div style={styles.dashboard}>
+                {`${props.user.name}'s Dashboard`}
+                <UserAccount style={styles.dashboard}/>
+            </div>
         </div>
     )
 }
@@ -27,13 +30,16 @@ let styles = {
     container: {
         display: 'flex',
         alignItems: 'left',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        
     },
     sidebar: {
         width: '20%',
         backgroundColor: '#142a11' 
     },
     dashboard: {
-        alignItems: 'center'
+        alignItems: 'center',
+        border: '1px dotted black',
+        width: '85%'
     }
 }

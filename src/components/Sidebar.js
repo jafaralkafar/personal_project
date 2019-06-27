@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Sidebar(props) {
     return (
-        <div>Sidebar</div>
+        <div style={{width: '15%', backgroundColor: '#142a11' }}>Sidebar</div>
     )
 }
