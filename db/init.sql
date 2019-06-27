@@ -12,3 +12,5 @@ CREATE TABLE stories (
     title VARCHAR,
     fileUrl TEXT
 );
+
+CREATE TABLE purchasedStories
