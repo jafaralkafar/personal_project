@@ -23,7 +23,7 @@ module.exports = {
             req.session.user = newUser
             res.send(req.session.user)
         } catch (error) {
-            console.log('you messed up', error)
+            console.log('you messed up registering', error)
             res.status(500).send(error)
         }
     },
@@ -44,7 +44,7 @@ module.exports = {
             req.session.user = user
             res.send(req.session.user)
         } catch (error) {
-            console.log('there was an error', error)
+            console.log('there was an error logging in', error)
             res.status(500).send(error)
         }
     },
@@ -54,5 +54,20 @@ module.exports = {
     },
     currentUser: (req, res) => {
         res.send(req.session.user)
+    },
+    updateUserName: async (req, res) => {
+        try {
+            const db = req.app.get('db')
+            const { name } = req.body
+            const { id } = req.params
+            let userName = await db.updateUserName({
+                id,
+                name: name
+            })
+            res.status(200).send(userName)
+        } catch (error) {
+            console.log('there was an error updating')
+            res.status(500).send(error)
+        }
     }
 }
