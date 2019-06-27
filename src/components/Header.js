@@ -42,7 +42,12 @@ let styles = {
         alignItems: 'center',
         backgroundColor: '#142a11',
         fontFamily: 'Georgia, serif',
-        color: 'gray'
+        color: 'gray',
+        position: '-webkit-sticky',
+        // eslint-disable-next-line no-dupe-keys
+        position: 'sticky',
+        top: 0,
+        width: '100%'
     },
     logo: {
         flex: 4,

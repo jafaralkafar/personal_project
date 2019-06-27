@@ -18,7 +18,6 @@ const LoginForm = props => {
     }
 
     return (
-        <>
         <div>
             <input
                 name="email"
@@ -35,7 +34,6 @@ const LoginForm = props => {
                 </Link>
             <br/>
         </div>
-        </>
     )
 }
 
