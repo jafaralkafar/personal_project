@@ -3,7 +3,8 @@ CREATE TABLE users (
     name VARCHAR,
     email VARCHAR,
     password VARCHAR,
-    isAdmin BOOLEAN
+    isAdmin BOOLEAN,
+    purchased_stories TEXT
 );
 
 CREATE TABLE stories (
@@ -12,5 +13,3 @@ CREATE TABLE stories (
     title VARCHAR,
     fileUrl TEXT
 );
-
-CREATE TABLE purchasedStories
