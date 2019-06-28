@@ -40,8 +40,8 @@ let styles = {
     dashboard: {
         alignItems: 'left',
         justifySelf: 'center',
-        width: '80%',
-        marginLeft: '20%',
+        width: '82%',
+        marginLeft: '19%',
         backgroundColor: 'gray'
     }
 }

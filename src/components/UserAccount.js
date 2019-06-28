@@ -5,13 +5,13 @@ const UserAccount = props => {
 
     return (
         <div style={styles.container}>
-            <span>
-                <div>{props.user.name}</div>
+            <span style={styles.rows}>
+                <div style={{marginRight: '20px'}}>{props.user.name}</div>
                 <button>Update</button>
             </span>
             <div style={styles.break}></div>
-            <span>
-                <div>{props.user.email}</div>
+            <span style={styles.rows}>
+                <div style={{marginRight: '20px'}}>{props.user.email}</div>
                 <button>Update</button>
             </span>
         </div>
@@ -35,6 +35,9 @@ let styles = {
     break: {
         flexBasis: '100%',
         height: 0
+    },
+    rows: {
+        display: 'flex'
     }
 
 }
