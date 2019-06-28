@@ -20,6 +20,11 @@ const LOGOUT_USER_PENDING = 'LOGOUT_USER_PENDING'
 const LOGOUT_USER_FULFILLED = 'LOGOUT_USER_FULFILLED'
 const LOGOUT_USER_REJECTED = 'LOGOUT_USER_REJECTED'
 
+const UPDATE_USER = 'UPDATE_USER'
+const UPDATE_USER_PENDING = 'UPDATE_USER_PENDING'
+const UPDATE_USER_FULFILLED = 'UPDATE_USER_FULFILLED'
+const UPDATE_USER_REJECTED = 'UPDATE_USER_REJECTED'
+
 const initialState = {
     loading: false,
     data: null,
@@ -56,6 +61,13 @@ export default function(state = initialState, action) {
         case LOGOUT_USER_REJECTED:
             return { ...state, error: action.payload, loading: false}
 
+        case UPDATE_USER_PENDING:
+            return { ...state, loading: true }
+        case UPDATE_USER_FULFILLED:
+            return { ...state, data: action.payload.data, loading: false }
+        case UPDATE_USER_REJECTED:
+            return { ...state, error: action.payload, loading: false}
+
         default:
             return state
     }
@@ -86,5 +98,12 @@ export function register(registerInfo) {
     return {
         type: REGISTER_USER,
         payload: axios.post('/auth/register', registerInfo)
+    }
+}
+
+export function updateUser(id) {
+    return {
+        type: UPDATE_USER,
+        payload: axios.post('/auth/updateUser/:id')
     }
 }

@@ -55,7 +55,7 @@ module.exports = {
     currentUser: (req, res) => {
         res.send(req.session.user)
     },
-    updateUserName: async (req, res) => {
+    updateUser: async (req, res) => {
         try {
             const db = req.app.get('db')
             const { name } = req.body

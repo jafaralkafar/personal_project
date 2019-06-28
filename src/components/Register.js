@@ -17,7 +17,7 @@ const Register = props => {
     }
 
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: 'column'}}>
             {(props.user) && <Redirect to='/'/>}
             <input
                 name="name"

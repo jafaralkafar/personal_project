@@ -1,8 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
+// import { Link } from 'react-router-dom'
+import { updateUser } from '../redux/reducers/user'
 
 const UserAccount = props => {
 
+    // create a function for the update buttons when they are pushed they will return an object, the new information to be updated and a command for the switch statement
     return (
         <div style={styles.container}>
             <span style={styles.rows}>
@@ -23,7 +26,9 @@ let mapStateToProps = state => {
     return { user }
 }
 
-export default connect(mapStateToProps)(UserAccount)
+
+
+export default connect(mapStateToProps, { updateUser })(UserAccount)
 
 let styles = {
     container: {
