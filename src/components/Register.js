@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { register } from '../redux/reducers/user'
 
 const Register = props => {
@@ -18,6 +18,7 @@ const Register = props => {
 
     return (
         <div>
+            {(props.user) && <Redirect to='/'/>}
             <input
                 name="name"
                 type="text"
@@ -33,9 +34,7 @@ const Register = props => {
                 type="password"
                 placeholder="password"
                 onChange={handleChange}/>
-            <Link to='/'>
-                <button onClick={handleSubmit}>Register</button>
-            </Link>
+            <button onClick={handleSubmit}>Register</button>
         </div>
     )
 }

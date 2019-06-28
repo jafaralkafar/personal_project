@@ -7,7 +7,7 @@ import Loading from './Loading'
 
 function LandingPage(props) {
     return (
-        <div>
+        <div style={{height: 'calc(93vh)', width:'100vw'}}>
             { props.loading ? <Loading /> : (props.user ? <Dashboard /> : 
             <div>
                 <Link to='/register'>Register</Link>

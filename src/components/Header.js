@@ -47,13 +47,14 @@ let styles = {
         // eslint-disable-next-line no-dupe-keys
         position: 'sticky',
         top: 0,
-        width: '100%'
+        width: '100%',
+        zIndex: 10,
     },
     logo: {
         flex: 4,
         display: 'flex',
         justifyContent: 'flex-start',
-        height: 50,
+        height: '7vh',
         color: 'inherit',
         fontFamily: 'inherit',
         textDecoration: 'none'
