@@ -11,7 +11,6 @@ const Dashboard = props => {
         <div style={styles.container}>
             <Sidebar style={styles.sidebar} />
             <div style={styles.dashboard}>
-                <div>{`${props.user.name}'s Dashboard`}</div>
                 <UserAccount />
             </div>
         </div>
@@ -39,11 +38,10 @@ let styles = {
         backgroundColor: '#142a11'
     },
     dashboard: {
-        alignItems: 'center',
+        alignItems: 'left',
         justifySelf: 'center',
-        border: '1px dotted black',
         width: '80%',
-        marginLeft: '20%'
-        
+        marginLeft: '20%',
+        backgroundColor: 'gray'
     }
 }

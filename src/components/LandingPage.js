@@ -7,12 +7,12 @@ import Loading from './Loading'
 
 function LandingPage(props) {
     return (
-        <div style={{height: 'calc(93vh)', width:'100vw'}}>
+        <div style={styles.container}>
             { props.loading ? <Loading /> : (props.user ? <Dashboard /> : 
-            <div>
-                <Link to='/register'>Register</Link>
-                <br/>
+            <div style={styles.login}>
                 <Link to='/login'>Login</Link>
+                <div style={styles.break}></div>
+                <Link to='/register'>Register</Link>
             </div>) }
         </div>
     )
@@ -25,3 +25,20 @@ let mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(LandingPage)
+
+let styles = {
+    container: {
+        height: '93vh',
+        width: '100vw'
+    },
+    login: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap'
+    },
+    break: {
+        flexBasis: '100%',
+        height: 0
+    }
+}    
