@@ -12,7 +12,7 @@ let styles = {
     width: '20%',
     backgroundColor: '#142a11',
     position: 'fixed',
-    height: '93vh',
+    height: '100%',
     fontFamily: 'Georgia, serif',
     color: 'gray',
     justifyContent: 'center',

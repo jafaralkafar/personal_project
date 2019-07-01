@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
+import { getStories } from '../../redux/reducers/story'
 
 function Store(props) {
+
+    useEffect((props) => {
+        props.getStories()
+    }, [])
+
     return (
-        <div>Store</div>
+        <div style={styles}>
+            Store
+        </div>
     )
 }
 
 
-let mapStateToProps = state => {
-    let { data: user } = state.user
-    return { user }
-}
 
-export default connect(mapStateToProps)(Store)
+
+export default connect(null, { getStories })(Store)
+
+let styles = {
+    backgroundColor: 'gray',
+    height: '100vh'
+}

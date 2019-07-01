@@ -33,3 +33,4 @@ app.get('/auth/currentUser', AuthCtrl.currentUser)
 app.post('/auth/updateUser/:id', AuthCtrl.updateUser)
 
 app.get('/api/stories', StoryCtrl.getAll)
+app.get('/api/stories', StoryCtrl.getUserStories)
