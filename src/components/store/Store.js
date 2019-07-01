@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import { getStories } from '../../redux/reducers/story'
 
-function Store(props) {
+const Store = props => {
 
-    useEffect((props) => {
-        props.getStories()
+    useEffect(() => {
+        getStories()
     }, [])
 
     return (
