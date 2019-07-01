@@ -3,8 +3,7 @@ CREATE TABLE users (
     name VARCHAR,
     email VARCHAR,
     password VARCHAR,
-    isAdmin BOOLEAN,
-    purchased_stories TEXT
+    isAdmin BOOLEAN
 );
 
 CREATE TABLE stories (
@@ -12,4 +11,10 @@ CREATE TABLE stories (
     user_id INTEGER REFERENCES users,
     title VARCHAR,
     fileUrl TEXT
+);
+
+CREATE TABLE userstories (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users,
+    story_id INTEGER REFERENCES stories
 );

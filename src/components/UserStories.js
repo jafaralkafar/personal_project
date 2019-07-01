@@ -1,0 +1,1 @@
+// in order for this to work as an array stored in the users db i would have to split the array and then pass each of those split items into the database, or I could just make a third table that will store the userId and the story id on the same row and return that per user.

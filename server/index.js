@@ -4,6 +4,7 @@ const session = require('express-session')
 require('dotenv/config')
 
 const AuthCtrl = require('./controllers/auth.js')
+const StoryCtrl = require('./controllers/story.js')
 
 const app = express()
 
@@ -30,3 +31,5 @@ app.post('/auth/login', AuthCtrl.login)
 app.get('/auth/logout', AuthCtrl.logout)
 app.get('/auth/currentUser', AuthCtrl.currentUser)
 app.post('/auth/updateUser/:id', AuthCtrl.updateUser)
+
+app.get('/api/stories', StoryCtrl.getAll)
