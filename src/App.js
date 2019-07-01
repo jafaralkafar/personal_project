@@ -6,7 +6,6 @@ import LandingPage from './components/LandingPage'
 import LoginForm from './components/LoginForm'
 import Register from './components/Register'
 import Dashboard from './components/Dashboard'
-import UserAccount from './components/UserAccount'
 import Store from './components/store/Store'
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
           <Route path="/login" component={LoginForm} />
           <Route path="/register" component={Register} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route path="/useraccount" component={UserAccount} />
           <Route path="/store" component={Store} />
         </Switch>
       </Router>

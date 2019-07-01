@@ -101,9 +101,9 @@ export function register(registerInfo) {
     }
 }
 
-export function updateUser(id) {
+export function updateUser(id, updateInfo) {
     return {
         type: UPDATE_USER,
-        payload: axios.post('/auth/updateUser/:id')
+        payload: axios.post('/auth/updateUser/:id', updateInfo)
     }
 }

@@ -32,6 +32,7 @@ let styles = {
         justifyContent: 'space-between',
         height: '100%',
         position: 'relative',
+        backgroundColor: 'gray'
     },
     sidebar: {
         width: '20%',
@@ -42,6 +43,7 @@ let styles = {
         justifySelf: 'center',
         width: '82%',
         marginLeft: '19%',
-        backgroundColor: 'gray'
+        backgroundColor: 'gray',
+        height: '100%'
     }
 }

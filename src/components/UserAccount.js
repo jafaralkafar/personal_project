@@ -5,7 +5,7 @@ import { updateUser } from '../redux/reducers/user'
 
 const UserAccount = props => {
 
-    // create a function for the update buttons when they are pushed they will return an object, the new information to be updated and a command for the switch statement
+    // create a function for the update buttons when they are pushed they will return an object, the new information to be updated and a command for the switch statement and either have an input field show up when you click on the fields and then click update or click update and have an input field populate next to the button.
     return (
         <div style={styles.container}>
             <span style={styles.rows}>

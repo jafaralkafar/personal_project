@@ -7,7 +7,7 @@ import { logout } from '../redux/reducers/user'
 function NavBar(props) {
     return (
         <div style={styles.navbar}>
-            <Link style={styles.navbar} to='/useraccount'>Account</Link>
+            <Link style={styles.navbar} to='/'>Account</Link>
             <Link style={styles.navbar} to='/store'>Store</Link>
             <Link style={styles.navbar} onClick={props.logout} to='/'>Logout</Link>
         </div>
