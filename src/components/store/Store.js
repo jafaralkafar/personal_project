@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import { getStories } from '../../redux/reducers/story'
+import { Card } from './PreviewCards'
+import Tilt from 'react-tilt'
 
 const Store = props => {
 
@@ -10,7 +12,16 @@ const Store = props => {
 
     return (
         <div style={styles}>
-            Store
+            <Tilt options={{max: 20, reverse: true}}>
+                <Card>
+                    Store
+                </Card>
+            </Tilt>
+            <Tilt>
+                <Card>
+                    Store 2
+                </Card>
+            </Tilt>
         </div>
     )
 }
@@ -21,6 +32,5 @@ const Store = props => {
 export default connect(null, { getStories })(Store)
 
 let styles = {
-    backgroundColor: 'gray',
     height: '100vh'
 }

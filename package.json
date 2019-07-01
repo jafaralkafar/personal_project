@@ -16,7 +16,8 @@
     "react-scripts": "3.0.1",
     "react-tilt": "^0.1.4",
     "redux": "^4.0.1",
-    "redux-promise-middleware": "^6.1.1"
+    "redux-promise-middleware": "^6.1.1",
+    "styled-components": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
