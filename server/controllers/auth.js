@@ -58,15 +58,22 @@ module.exports = {
     updateUser: async (req, res) => {
         try {
             const db = req.app.get('db')
-            const { name } = req.body
-            const { id } = req.params
+            const { name, email } = req.body
+            let { id } = req.params
+            id = +id
+            let foundUser = await db.findUserById([id])
+
             let userName = await db.updateUserName({
                 id,
-                name: name
+                name: name ? name : foundUser[0].name,
+                email: email ? email : foundUser[0].email
             })
-            res.status(200).send(userName)
+            let user = userName[0]
+            delete user.password
+            req.session.user = user
+            res.status(200).send(req.session.user)
         } catch (error) {
-            console.log('there was an error updating')
+            console.log('there was an error updating', error)
             res.status(500).send(error)
         }
     }

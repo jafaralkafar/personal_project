@@ -18,7 +18,7 @@ function Header(props) {
                 </Tilt>  
             </Link>
             <Link to='/' style={styles.logo}>
-                <div style={{display: 'flex', alignItems:'center'}}>PYPS</div>
+                <h3 style={{display: 'flex', alignItems:'center'}}>PYPS</h3>
             </Link>
             <div>
                 { user && <NavBar />}

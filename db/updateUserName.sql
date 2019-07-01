@@ -1,3 +1,6 @@
 UPDATE users
-SET name=${name}
-WHERE id=${id}
+SET name=${name}, email=${email}
+WHERE user_id=${id};
+
+SELECT * FROM users
+WHERE user_id=${id};
