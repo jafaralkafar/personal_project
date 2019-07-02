@@ -5,6 +5,7 @@ require('dotenv/config')
 
 const AuthCtrl = require('./controllers/auth.js')
 const StoryCtrl = require('./controllers/story.js')
+const PayCtrl = require('./controllers/pay.js')
 
 const app = express()
 
@@ -34,3 +35,5 @@ app.post('/auth/updateUser/:id', AuthCtrl.updateUser)
 
 app.get('/api/stories', StoryCtrl.getAll)
 app.get('/api/stories', StoryCtrl.getUserStories)
+
+app.post('/api/pay', PayCtrl.pay)

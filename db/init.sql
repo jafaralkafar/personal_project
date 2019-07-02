@@ -10,6 +10,7 @@ CREATE TABLE stories (
     story_id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users,
     title VARCHAR,
+    desc VARCHAR(500),
     fileUrl TEXT
 );
 
