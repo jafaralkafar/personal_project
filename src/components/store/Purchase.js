@@ -35,7 +35,7 @@ const Purchase = (props) => {
             token={onToken}
             allowRememberMe={true}
             >
-                
+            
         </StripeCheckout>
     )
 }
