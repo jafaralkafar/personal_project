@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios';
+import { postPurchaseStory } from '../../redux/reducers/story'
 import icon from '../../icons/dollar.png'
 
-export default function Purchase(props) {
-    const [state, /*setState*/] = useState({amount: 0})
+const Purchase = props => {
+    const [state, /*setState*/] = useState({amount: +props.story[0].price})
 
     // const onOpened = () => {
 
@@ -16,11 +18,12 @@ export default function Purchase(props) {
 
     const onToken = (token) => {
         let {amount} = state
-        amount /= 100
+        amount *= 100
         token.card = void 0
-        axios.post('/api/payment', {token, amount: amount })
+        axios.post('/api/pay', {token, amount: amount })
         .then(response => {
             alert('Payment received')
+            props.postPurchaseStory( props.user.user_id, props.story.story_id )
         })
     }
 
@@ -34,8 +37,17 @@ export default function Purchase(props) {
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
             token={onToken}
             allowRememberMe={true}
+            
             >
             <button style={{backgroundColor: 'white', border: 'none'}}><img src={icon} alt='dollar' style={{height: 30}}/></button>
         </StripeCheckout>
     )
 }
+
+let mapStateToProps = state => {
+    let { data: user } = state.user
+    let { data: story } = state.story
+    return { user, story }
+}
+
+export default connect(mapStateToProps, { postPurchaseStory })(Purchase)

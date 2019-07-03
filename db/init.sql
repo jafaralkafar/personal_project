@@ -10,7 +10,8 @@ CREATE TABLE stories (
     story_id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users,
     title VARCHAR,
-    desc VARCHAR(500),
+    storydesc VARCHAR(500),
+    price DECIMAL(4, 2),
     fileUrl TEXT
 );
 

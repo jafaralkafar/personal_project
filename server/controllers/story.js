@@ -20,5 +20,16 @@ module.exports = {
             console.log('error getting user stories', error)
             res.status(500).send(error)
         }
+    },
+    postPurchasedStory: async (req, res) => {
+        try {
+            const db = req.app.get('db')
+            const { user_id, story_id } = req.body
+            let purchasedStory = await db.postPurchase( user_id, story_id )
+            res.status(200).send(purchasedStory)
+        } catch (error) {
+            console.log('error posting purchased story', error)
+            res.status(500).send(error)
+        }
     }
 }

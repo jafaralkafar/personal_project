@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { getAll} from '../redux/reducers/story'
 
 import { logout } from '../redux/reducers/user'
 
@@ -19,7 +20,7 @@ let mapStateToProps = state => {
     return { user }
 }
 
-export default connect(mapStateToProps, { logout })(NavBar)
+export default connect(mapStateToProps, { logout, getAll })(NavBar)
 
 let styles = {
     navbar: {

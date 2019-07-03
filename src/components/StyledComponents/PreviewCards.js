@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Card = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background: white;
     border-radius: 6px;
     border: 1px solid black;
@@ -15,6 +15,9 @@ export const Card = styled.div`
     transition: all .2s ease-in-out;
     overflow: scroll;
     overflow-x: hidden;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
     :hover {
         transform: scale(1.1)
