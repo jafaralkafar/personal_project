@@ -37,7 +37,7 @@ const Purchase = props => {
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
             token={onToken}
             allowRememberMe={true}
-            
+            email={false}
             >
             <button style={{backgroundColor: 'white', border: 'none'}}><img src={icon} alt='dollar' style={{height: 30}}/></button>
         </StripeCheckout>

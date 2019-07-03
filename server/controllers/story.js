@@ -24,7 +24,8 @@ module.exports = {
     postPurchasedStory: async (req, res) => {
         try {
             const db = req.app.get('db')
-            const { user_id, story_id } = req.body
+            const { user_id, story_id } = req.query
+            console.log(user_id, story_id)
             let purchasedStory = await db.postPurchase( user_id, story_id )
             res.status(200).send(purchasedStory)
         } catch (error) {

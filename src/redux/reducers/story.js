@@ -64,8 +64,9 @@ export function getUserStories() {
 }
 
 export function postPurchaseStory(userId, storyId) {
+    console.log(userId, storyId)
     return {
         type: POST_STORY,
-        payload: axios.post('/api/stories')
+        payload: axios.post(`/api/stories?user_id=${userId}&story_id=${storyId}` )
     }
 }
