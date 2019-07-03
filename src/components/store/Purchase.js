@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios';
-import icon from '../../icons/pypsicon'
+import icon from '../../icons/dollar.png'
 
-const Purchase = (props) => {
-    const [state, setState] = useState({amount: 0})
+export default function Purchase(props) {
+    const [state, /*setState*/] = useState({amount: 0})
 
-    const onOpened = () => {
+    // const onOpened = () => {
 
-    }
+    // }
 
-    const onClosed = () => {
+    // const onClosed = () => {
 
-    }
+    // }
 
     const onToken = (token) => {
         let {amount} = state
@@ -35,7 +35,7 @@ const Purchase = (props) => {
             token={onToken}
             allowRememberMe={true}
             >
-            
+            <button style={{backgroundColor: 'white', border: 'none'}}><img src={icon} alt='dollar' style={{height: 30}}/></button>
         </StripeCheckout>
     )
 }
