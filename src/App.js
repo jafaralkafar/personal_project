@@ -7,6 +7,7 @@ import LoginForm from './components/LoginForm'
 import Register from './components/Register'
 import Dashboard from './components/Dashboard'
 import Store from './components/store/Store'
+import StoryCard from './components/stories/StoryCard'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/store" component={Store} />
+          <Route path="/fullstory" component={StoryCard} />
         </Switch>
       </Router>
     </div>

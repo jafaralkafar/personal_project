@@ -31,7 +31,7 @@ const Purchase = props => {
             name="PYPS"
             description="Book Purchase"
             image={icon}
-            amount={state.amount}
+            amount={state.amount * 100}
             currency="USD"
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
             token={onToken}

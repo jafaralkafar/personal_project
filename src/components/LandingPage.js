@@ -29,7 +29,7 @@ export default connect(mapStateToProps)(LandingPage)
 let styles = {
     container: {
         height: '93vh',
-        width: '100vw'
+        width: '100%'
     },
     login: {
         display: 'flex',

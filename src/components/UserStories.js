@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { getUserStories, deleteUserStory } from '../redux/reducers/story'
 import { Card } from './StyledComponents/PreviewCards';
+import { Link } from 'react-router-dom'
 
 const UserStories = props => {
     const { getUserStories } = props
@@ -19,7 +20,7 @@ const UserStories = props => {
                     return (
                         <Card
                             key={eachStory.story_id}>
-                            <h3>{eachStory.title}</h3>
+                            <Link to='fullstory'><h3>{eachStory.title}</h3></Link>
                             <p>{eachStory.storydesc}</p>
                             <p>Author: {eachStory.name}</p>
                             <button onClick={() => props.deleteUserStory(eachStory.id)}>
