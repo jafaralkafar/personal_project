@@ -7,7 +7,7 @@ import icon from '../../icons/dollar.png'
 
 const Purchase = props => {
     const [state, /*setState*/] = useState({amount: +props.story[0].price})
-
+    console.log(typeof props.story[0].story_id, typeof props.user.user_id)
     // const onOpened = () => {
 
     // }
@@ -23,7 +23,7 @@ const Purchase = props => {
         axios.post('/api/pay', {token, amount: amount })
         .then(response => {
             alert('Payment received')
-            props.postPurchaseStory( props.user.user_id, props.story.story_id )
+            props.postPurchaseStory( props.user.user_id, props.story[0].story_id )
         })
     }
 
@@ -37,7 +37,6 @@ const Purchase = props => {
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
             token={onToken}
             allowRememberMe={true}
-            email={false}
             >
             <button style={{backgroundColor: 'white', border: 'none'}}><img src={icon} alt='dollar' style={{height: 30}}/></button>
         </StripeCheckout>
