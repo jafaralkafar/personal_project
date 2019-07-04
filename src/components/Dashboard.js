@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 // import { Link } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import UserAccount from './UserAccount'
+import UserStories from './UserStories'
 
 
 const Dashboard = props => {
@@ -12,6 +13,7 @@ const Dashboard = props => {
             <Sidebar style={styles.sidebar} />
             <div style={styles.dashboard}>
                 <UserAccount />
+                <UserStories />
             </div>
         </div>
     )

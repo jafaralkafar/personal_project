@@ -7,7 +7,6 @@ import icon from '../../icons/dollar.png'
 
 const Purchase = props => {
     const [state, /*setState*/] = useState({amount: +props.story[0].price})
-    console.log(typeof props.story[0].story_id, typeof props.user.user_id)
     // const onOpened = () => {
 
     // }

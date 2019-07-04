@@ -27,12 +27,21 @@ module.exports = {
             let { user_id, story_id } = req.query
             user_id = +user_id
             story_id = +story_id
-            console.log(typeof user_id, typeof story_id)
             let purchasedStory = await db.postPurchase( {user_id, story_id} )
             res.status(200).send(purchasedStory)
         } catch (error) {
             console.log('error posting purchased story', error)
             res.status(500).send(error)
+        }
+    },
+    deleteUserStory: async (req, res) => {
+        try {
+            const db = req.app.get('db')
+            let { id } = req.params
+            let newArray = await db.deleteUserStory(id)
+            res.status(200).send(newArray)
+        } catch (error) {
+            console.log('error deleting user story', error)
         }
     }
 }

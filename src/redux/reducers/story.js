@@ -15,9 +15,15 @@ const POST_STORY_PENDING = 'POST_STORY_PENDING'
 const POST_STORY_FULFILLED = 'POST_STORY_FULFILLED'
 const POST_STORY_REJECTED = 'POST_STORY_REJECTED'
 
+const DELETE_USER_STORY = 'DELETE_USER_STORY'
+const DELETE_USER_STORY_PENDING = 'DELETE_USER_STORY_PENDING'
+const DELETE_USER_STORY_FULFILLED = 'DELETE_USER_STORY_FULFILLED'
+const DELETE_USER_STORY_REJECTED = 'DELETE_USER_STORY_REJECTED'
+
 const initialState = {
     loading: false,
     data: [],
+    userStories: [],
     error: null
 }
 
@@ -33,15 +39,22 @@ export default function(state = initialState, action) {
         case GET_USER_STORY_PENDING:
                 return { ...state, loading: true }
         case GET_USER_STORY_FULFILLED:
-                return { ...state, data: action.payload.data, loading: false }
+                return { ...state, userStories: action.payload.data, loading: false }
         case GET_USER_STORY_REJECTED:
                 return { ...state, error: action.payload, loading: false }
 
         case POST_STORY_PENDING:
             return { ...state, loading: true }
         case POST_STORY_FULFILLED:
-                return { ...state, data: action.payload.data, loading: false }
+                return { ...state, loading: false }
         case POST_STORY_REJECTED:
+                return { ...state, error: action.payload, loading: false }
+
+        case DELETE_USER_STORY_PENDING:
+            return { ...state, loading: true }
+        case DELETE_USER_STORY_FULFILLED:
+                return { ...state, data: action.payload.data, loading: false }
+        case DELETE_USER_STORY_REJECTED:
                 return { ...state, error: action.payload, loading: false }
 
         default:
@@ -64,9 +77,15 @@ export function getUserStories() {
 }
 
 export function postPurchaseStory(userId, storyId) {
-    console.log(userId, storyId)
     return {
         type: POST_STORY,
         payload: axios.post(`/api/stories?user_id=${userId}&story_id=${storyId}` )
+    }
+}
+
+export function deleteUserStory(id) {
+    return {
+        type: DELETE_USER_STORY,
+        payload: axios.delete(`/api/stories/${id}`)
     }
 }
