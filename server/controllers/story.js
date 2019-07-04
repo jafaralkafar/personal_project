@@ -28,7 +28,7 @@ module.exports = {
             user_id = +user_id
             story_id = +story_id
             console.log(typeof user_id, typeof story_id)
-            let purchasedStory = await db.postPurchase( user_id, story_id )
+            let purchasedStory = await db.postPurchase( {user_id, story_id} )
             res.status(200).send(purchasedStory)
         } catch (error) {
             console.log('error posting purchased story', error)

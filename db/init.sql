@@ -8,7 +8,7 @@ CREATE TABLE users (
 
 CREATE TABLE stories (
     story_id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users,
+    user_id INT REFERENCES users,
     title VARCHAR,
     storydesc VARCHAR(500),
     price DECIMAL(4, 2),
@@ -17,6 +17,6 @@ CREATE TABLE stories (
 
 CREATE TABLE userstories (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users,
-    story_id INTEGER REFERENCES stories
+    user_id INT REFERENCES users,
+    story_id INT REFERENCES stories
 );
