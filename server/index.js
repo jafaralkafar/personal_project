@@ -6,6 +6,7 @@ require('dotenv/config')
 const AuthCtrl = require('./controllers/auth.js')
 const StoryCtrl = require('./controllers/story.js')
 const PayCtrl = require('./controllers/pay.js')
+const SThreeCtrl = require('./controllers/sthree.js')
 
 const app = express()
 
@@ -31,7 +32,7 @@ app.post('/auth/register', AuthCtrl.register)
 app.post('/auth/login', AuthCtrl.login)
 app.get('/auth/logout', AuthCtrl.logout)
 app.get('/auth/currentUser', AuthCtrl.currentUser)
-app.post('/auth/updateUser/:id', AuthCtrl.updateUser)
+app.put('/auth/updateUser/:id', AuthCtrl.updateUser)
 
 app.get('/api/stories', StoryCtrl.getAll)
 app.get('/api/stories/user-stories', StoryCtrl.getUserStories)
@@ -39,3 +40,5 @@ app.post('/api/stories', StoryCtrl.postPurchasedStory)
 app.delete('/api/stories/:id', StoryCtrl.deleteUserStory)
 
 app.post('/api/pay', PayCtrl.pay)
+
+app.get('/api/signs3', SThreeCtrl.getFile)

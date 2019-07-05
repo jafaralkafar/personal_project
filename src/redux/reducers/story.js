@@ -20,6 +20,17 @@ const DELETE_USER_STORY_PENDING = 'DELETE_USER_STORY_PENDING'
 const DELETE_USER_STORY_FULFILLED = 'DELETE_USER_STORY_FULFILLED'
 const DELETE_USER_STORY_REJECTED = 'DELETE_USER_STORY_REJECTED'
 
+const UPLOAD_USER_STORY = 'UPLOAD_USER_STORY'
+const UPLOAD_USER_STORY_PENDING = 'UPLOAD_USER_STORY_PENDING'
+const UPLOAD_USER_STORY_FULFILLED = 'UPLOAD_USER_STORY_FULFILLED'
+const UPLOAD_USER_STORY_REJECTED = 'UPLOAD_USER_STORY_REJECTED'
+
+const GET_USER_STORY_URL = 'GET_USER_STORY_URL'
+const GET_USER_STORY_URL_PENDING = 'GET_USER_STORY_URL_PENDING'
+const GET_USER_STORY_URL_FULFILLED = 'GET_USER_STORY_URL_FULFILLED'
+const GET_USER_STORY_URL_REJECTED = 'GET_USER_STORY_URL_REJECTED'
+
+
 const initialState = {
     loading: false,
     data: [],
@@ -49,6 +60,20 @@ export default function(state = initialState, action) {
                 return { ...state, loading: false }
         case POST_STORY_REJECTED:
                 return { ...state, error: action.payload, loading: false }
+
+        case UPLOAD_USER_STORY_PENDING:
+            return { ...state, loading: true }
+        case UPLOAD_USER_STORY_FULFILLED:
+            return { ...state, loading: false }
+        case UPLOAD_USER_STORY_REJECTED:
+            return { ...state, error: action.payload, loading: false }
+
+        case GET_USER_STORY_URL_PENDING:
+            return { ...state, loading: true }
+        case GET_USER_STORY_URL_FULFILLED:
+            return { ...state, userUrl: action.payload.data, loading: false }
+        case GET_USER_STORY_URL_REJECTED:
+            return { ...state, error: action.payload, loading: false }
 
         case DELETE_USER_STORY_PENDING:
             return { ...state, loading: true }
@@ -89,3 +114,17 @@ export function deleteUserStory(id) {
         payload: axios.delete(`/api/stories/${id}`)
     }
 }
+
+export function uploadUserStory(signedRequest, file, options) {
+    return {
+        type: UPLOAD_USER_STORY,
+        payload: axios.put(signedRequest, file, options)
+    }
+}
+
+export function getUserStoryUrl(id) {
+    return {
+        type: GET_USER_STORY_URL,
+        payload: axios.get(`/api/signs3/${id}`)
+    }
+} 
