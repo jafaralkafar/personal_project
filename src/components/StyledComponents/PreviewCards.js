@@ -22,4 +22,9 @@ export const Card = styled.div`
     :hover {
         transform: scale(1.1)
     }
+
+    @media screen and (max-width:900px) {
+        font-size: .85em;
+        width: 75%;
+    }
 `
