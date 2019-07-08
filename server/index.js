@@ -2,6 +2,7 @@ const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
 require('dotenv/config')
+const path = require('path')
 
 const AuthCtrl = require('./controllers/auth.js')
 const StoryCtrl = require('./controllers/story.js')
@@ -27,6 +28,10 @@ app.use(session({
         maxAge: 1000*60*60*24*365
     }
 }))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
+})
 
 app.post('/auth/register', AuthCtrl.register)
 app.post('/auth/login', AuthCtrl.login)
