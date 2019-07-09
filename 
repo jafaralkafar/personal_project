@@ -1,0 +1,252 @@
+[33mcommit 3755227734baed1f3043a28220704d639a9bc48e[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Mon Jul 8 12:19:12 2019 -0600
+
+    initial build push
+
+[33mcommit 6f3285237fbd36a3679807ef97bff024ce8eb071[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Mon Jul 8 12:12:52 2019 -0600
+
+    added some functionality to upload to s3
+
+[33mcommit f5c4cdeb12dd247a671888e9f34a7ef9a6deb0a0[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jul 5 16:58:52 2019 -0600
+
+    worked on getting s3 upload function working
+
+[33mcommit d922b0cb2d28961040273abb8c89e4928ff6dc35[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jul 5 08:55:41 2019 -0600
+
+    added choice cards to story card
+
+[33mcommit b7195ecf8da961825f231da7d16e3ca6d8857fc4[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jul 5 07:51:50 2019 -0600
+
+    added code inside choicecard component
+
+[33mcommit df6d2d2d045e8e13e6722988b9755d0d127b5af5[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Thu Jul 4 15:36:24 2019 -0600
+
+    added story cards and the routes for the story cards
+
+[33mcommit d6afc360d6318c469a6e04b3772de07ed0c6294f[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Thu Jul 4 11:59:22 2019 -0600
+
+    got the userStories and store function working with useeffect
+
+[33mcommit fcf3ad14d63104bc0a761a3887650b0c3d28a4fb[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jul 3 22:21:21 2019 -0600
+
+    massive likes its queries to only have one object passed through, booyah
+
+[33mcommit 1343de7b520a715c6a3831c4638cf61d8d3825ef[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jul 3 21:55:56 2019 -0600
+
+    trying to fix syntax error at posting purchased stories
+
+[33mcommit d19127a49ccc29ba78f2ad64286f96c606003ff9[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jul 3 16:38:50 2019 -0600
+
+    worked on passing through purchased story, isnt passing down storyid, fix it stupid
+
+[33mcommit cb3a66771ad66d4aa6713ebbefe0456d9a05ef69[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jul 3 15:35:32 2019 -0600
+
+    added purchase functionality, fixed stripe, added Store functionality
+
+[33mcommit 960a2e3e29f4c4cb10743f985dcfabf2ae2a505c[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Tue Jul 2 21:52:12 2019 -0600
+
+    finished stripe and set up icon button to bring up stripe payment
+
+[33mcommit 126aafd00df14b9937bac7fd6b5537dcfb467ca0[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Tue Jul 2 16:59:02 2019 -0600
+
+    changed stripe a little
+
+[33mcommit e6afdc70a99430ae7770d4810afa7e1978160e53[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Tue Jul 2 16:24:56 2019 -0600
+
+    added stripe
+
+[33mcommit d9feb732a77f458e61a59358229fe5ecac2a6ca2[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Mon Jul 1 17:09:20 2019 -0600
+
+    added styledcomponents and store preview card
+
+[33mcommit 72136a1266d4473701ef7639ccd2b7416040021a[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Mon Jul 1 16:15:41 2019 -0600
+
+    changed storycard in store to previewcard
+
+[33mcommit fb2f1e7fd9fb5b816db88bdc9b54695ffcd35865[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Mon Jul 1 16:15:10 2019 -0600
+
+    added useeffect to store and storycard to store component
+
+[33mcommit 85387640bf85bafbcf67d9cfa1f539ba5d09993e[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Mon Jul 1 15:36:46 2019 -0600
+
+    added store component functionality and story reducer
+
+[33mcommit 62bb314b2e44edf203b35bfc929d815b400b1a64[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Mon Jul 1 14:22:32 2019 -0600
+
+    added db for stories and userstories
+
+[33mcommit 386a3347368a0f6e50672c5e99017b0d8738b967[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Mon Jul 1 11:18:54 2019 -0600
+
+    finished update user function
+
+[33mcommit 6d31642c1c8f0902fef8fec416aa8e8c53480717[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Sun Jun 30 20:12:56 2019 -0600
+
+    changed some routes
+
+[33mcommit a18db126588477c85a2e1fc3fcf40c957036c2dc[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jun 28 16:38:33 2019 -0600
+
+    added backend and reducer code for update function
+
+[33mcommit bb0081da4dfc6457ddfd591bf92bb453427658ef[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jun 28 14:59:20 2019 -0600
+
+    added code to store changed some css
+
+[33mcommit 390b7dcd5f648d744b05610ef548e43898f0c21c[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jun 28 12:05:38 2019 -0600
+
+    small styling changes, added routes and pages for store and stories
+
+[33mcommit 79b685f10689cf57b79922edf061ab2d86984434[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jun 28 10:44:54 2019 -0600
+
+    fixed sidebar to the side and pushed dashboard over
+
+[33mcommit 46be8533052569d3a26545768f7175a06ee4ee96[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Thu Jun 27 16:36:55 2019 -0600
+
+    added purchased stories to user db
+
+[33mcommit 4c4ec826623e9ba1d5c3f2755d199db0ff9c14bd[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Thu Jun 27 16:30:29 2019 -0600
+
+    changed init in db
+
+[33mcommit b91ccaea5688fe5a3169d12d4996a7b8237d1df3[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Thu Jun 27 15:57:32 2019 -0600
+
+    added useraccount to the dashboard
+
+[33mcommit c385e5e217f9728e14141c06b437144a74ab69af[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Thu Jun 27 14:59:17 2019 -0600
+
+    added some update functionality
+
+[33mcommit 341e34b6e433a3f565c3386a153b62d1b7b0d83f[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Thu Jun 27 14:11:50 2019 -0600
+
+    added some update user functionality
+
+[33mcommit 31ed2ca34319f05e1b993193b4e7d6d1a8a6934a[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jun 26 16:27:01 2019 -0600
+
+    messed around a little, no real changes
+
+[33mcommit afa419ebb0b0c1647f6c3319a04ab7f749121445[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jun 26 15:55:43 2019 -0600
+
+    added error handling to user reducer
+
+[33mcommit dc9c29653cd44a2a63ed2f1276c6e02163b53066[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jun 26 15:10:34 2019 -0600
+
+    added register page and it works
+
+[33mcommit ab0853fec5b62c6b823f5462912921c36437f3de[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jun 26 13:46:28 2019 -0600
+
+    fixed stupid logoug-logout misspelling, auth works
+
+[33mcommit e709a1a9ca8580e645e9b54402f22676d9c3aca5[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Wed Jun 26 12:06:17 2019 -0600
+
+    finished login page
+
+[33mcommit f7c2bccebc3dff8924ae6b96691f54bff825167f[m
+Merge: df5bf2b 40356a2
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Tue Jun 25 16:30:34 2019 -0600
+
+    Merge branch 'master' of https://github.com/jafaralkafar/personal_project
+
+[33mcommit df5bf2b7a8bfd68dcc5baa4577d63c30b35df8a5[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Tue Jun 25 16:29:40 2019 -0600
+
+    changed header and landing
+
+[33mcommit 324573d2eb04cdcb392d7450778a64928f4ad0f1[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Tue Jun 25 15:04:30 2019 -0600
+
+    getting ready for hooks
+
+[33mcommit ecb81e231169a8ad195b276fc2a71bef280fc920[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Tue Jun 25 09:28:48 2019 -0600
+
+    added routes and components
+
+[33mcommit 40356a21bdb00ef1df446388eb1b7e1f94d560a6[m
+Author: jafaralkafar <jafaralkafar@yahoo.com>
+Date:   Fri Jun 21 15:54:53 2019 -0600
+
+    Delete .env
+
+[33mcommit 88ee343c17e00f661521e8ae81cf752387599612[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jun 21 15:54:30 2019 -0600
+
+    fixed .env issue
+
+[33mcommit 9d3236c3fb3d62eb10d99d0f60d64fa110c565c2[m
+Author: Grant Fox <granttfox@gmail.com>
+Date:   Fri Jun 21 15:53:07 2019 -0600
+
+    first push, added auth, created user db
