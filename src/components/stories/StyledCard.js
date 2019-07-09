@@ -11,11 +11,17 @@ export const FullStoryCard = styled.div`
     box-shadow: 5px 10px 18px #888888;
     width: 99%;
     padding: 10px;
+    object-fit: contain;
     margin: 1px;
     height: 100%;
     overflow: scroll;
     overflow-x: hidden;
     ::-webkit-scrollbar {
         display: none;
+    }
+
+    @media screen and (max-width: 900px) {
+        object-fit: contain;
+        max-width: 99%;
     }
 `

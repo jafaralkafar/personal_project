@@ -8,6 +8,9 @@ import Register from './components/Register'
 import Dashboard from './components/Dashboard'
 import Store from './components/store/Store'
 import StoryCard from './components/stories/StoryCard'
+import ChoiceOne from './components/stories/ChoiceOne'
+import ChoiceTwo from './components/stories/ChoiceTwo'
+import ChoiceThree from './components/stories/ChoiceThree'
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/store" component={Store} />
           <Route path="/fullstory" component={StoryCard} />
+          <Route path="/choiceone" component={ChoiceOne} />
+          <Route path="/choicetwo" component={ChoiceTwo} />
+          <Route path="/choicethree" component={ChoiceThree} />
         </Switch>
       </Router>
     </div>

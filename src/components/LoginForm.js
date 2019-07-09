@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { login } from '../redux/reducers/user'
+import { StyledLogin } from './StyledLogin'
 
 const LoginForm = props => {
     
@@ -18,21 +19,23 @@ const LoginForm = props => {
     }
 
     return (
-        <div style={{display: 'flex', flexDirection: 'column'}}>
-            {(props.user) && <Redirect to='/'/>}
-            <input
-                name="email"
-                type="text"
-                placeholder="email"
-                onChange={handleChange}/>
-            <input 
-                name="password"
-                type="password"
-                placeholder="password"
-                onChange={handleChange}/>
-                <button onClick={handleSubmit}>Login</button>
-            <br/>
-        </div>
+        <StyledLogin>
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+                {(props.user) && <Redirect to='/'/>}
+                <input
+                    name="email"
+                    type="text"
+                    placeholder="email"
+                    onChange={handleChange}/>
+                <input 
+                    name="password"
+                    type="password"
+                    placeholder="password"
+                    onChange={handleChange}/>
+                    <button onClick={handleSubmit}>Login</button>
+                <br/>
+            </div>
+        </StyledLogin>
     )
 }
 

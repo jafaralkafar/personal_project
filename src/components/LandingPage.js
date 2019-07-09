@@ -5,6 +5,7 @@ import Dashboard from './Dashboard'
 import Loading from './Loading'
 
 
+
 function LandingPage(props) {
     return (
         <div style={styles.container}>
@@ -29,7 +30,7 @@ export default connect(mapStateToProps)(LandingPage)
 let styles = {
     container: {
         height: '93vh',
-        width: '100%'
+        width: '100%',
     },
     login: {
         display: 'flex',
