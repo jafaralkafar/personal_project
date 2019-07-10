@@ -28,6 +28,8 @@ app.use(session({
     }
 }))
 
+app.use(express.static(`${__dirname}/../build`))
+
 app.post('/auth/register', AuthCtrl.register)
 app.post('/auth/login', AuthCtrl.login)
 app.get('/auth/logout', AuthCtrl.logout)
