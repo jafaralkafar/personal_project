@@ -11,6 +11,7 @@ import StoryCard from './components/stories/StoryCard'
 import ChoiceOne from './components/stories/ChoiceOne'
 import ChoiceTwo from './components/stories/ChoiceTwo'
 import ChoiceThree from './components/stories/ChoiceThree'
+import About from './components/Portfolio/About'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/choiceone" component={ChoiceOne} />
           <Route path="/choicetwo" component={ChoiceTwo} />
           <Route path="/choicethree" component={ChoiceThree} />
+          <Route path="/about" component={About} />
         </Switch>
       </Router>
     </div>
