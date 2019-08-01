@@ -12,6 +12,9 @@ import ChoiceOne from './components/stories/ChoiceOne'
 import ChoiceTwo from './components/stories/ChoiceTwo'
 import ChoiceThree from './components/stories/ChoiceThree'
 import About from './components/Portfolio/About'
+import ChoiceBrad from './components/Portfolio/ChoiceBrad'
+import ChoiceWill from './components/Portfolio/ChoiceWill'
+import ChoiceGrant from './components/Portfolio/ChoiceGrant'
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
           <Route path="/choicetwo" component={ChoiceTwo} />
           <Route path="/choicethree" component={ChoiceThree} />
           <Route path="/about" component={About} />
+          <Route path="/bradpitt" component={ChoiceBrad} />
+          <Route path="/willsmith" component={ChoiceWill} />
+          <Route path="/grantfox" component={ChoiceGrant} />
         </Switch>
       </Router>
     </div>
